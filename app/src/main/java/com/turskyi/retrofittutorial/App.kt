@@ -8,9 +8,7 @@ class App : Application() {
     private var retrofit: Retrofit? = null
 
     companion object {
-
         var api: UmoriliApi? = null
-            private set
     }
 
    override fun onCreate() {

@@ -10,6 +10,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.util.ArrayList
 
+/** funny stories from bash.org */
 class MainActivity : AppCompatActivity() {
 
     lateinit var recyclerView: RecyclerView

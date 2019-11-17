@@ -35,8 +35,8 @@ class PostsAdapter internal constructor(private val posts: List<PostModel>?) :
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var post: TextView = itemView.findViewById(R.id.postitem_post) as TextView
-        var site: TextView = itemView.findViewById(R.id.postitem_site) as TextView
+        var post: TextView = itemView.findViewById(R.id.post_item_post) as TextView
+        var site: TextView = itemView.findViewById(R.id.post_item_site) as TextView
     }
 }
 
