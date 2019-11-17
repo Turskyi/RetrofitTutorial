@@ -8,18 +8,12 @@ class PostModel {
     /**
      * @return The site
      */
-    /**
-     * @param site The site
-     */
     @SerializedName("site")
     @Expose
     var site: String? = null
 
     /**
      * @return The elementPureHtml
-     */
-    /**
-     * @param elementPureHtml The elementPureHtml
      */
     @SerializedName("elementPureHtml")
     @Expose
