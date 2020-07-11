@@ -8,15 +8,11 @@ class PostModel {
     /**
      * @return The site
      */
-    @SerializedName("site")
-    @Expose
-    var site: String? = null
+    @SerializedName("site") @Expose var site: String? = null
 
     /**
      * @return The elementPureHtml
      */
-    @SerializedName("elementPureHtml")
-    @Expose
-    var elementPureHtml: String? = null
+    @SerializedName("elementPureHtml") @Expose var elementPureHtml: String? = null
 
 }

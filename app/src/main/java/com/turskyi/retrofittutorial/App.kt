@@ -15,12 +15,12 @@ class App : Application() {
         super.onCreate()
 
         retrofit = Retrofit.Builder()
-            //Базовая часть адреса
+            /* Base url */
             .baseUrl("https://umorili.herokuapp.com")
-            //Конвертер, необходимый для преобразования JSON'а в объекты
+            /* Converter needed to convert JSON to object */
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-       //Создаем объект, при помощи которого будем выполнять запросы
-        api = retrofit!!.create(UmoriliApi::class.java)
+       /* creating object  for requests */
+        api = retrofit?.create(UmoriliApi::class.java)
    }
 }

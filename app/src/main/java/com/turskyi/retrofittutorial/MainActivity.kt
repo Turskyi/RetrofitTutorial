@@ -34,13 +34,13 @@ class MainActivity : AppCompatActivity() {
                 call: Call<List<PostModel>>,
                 response: Response<List<PostModel>>
             ) {
-                //Данные успешно пришли, но надо проверить response.body() на null
+                /* The data successfully arrived, but we need to check response.body () for null */
                 response.body()?.let { posts.addAll(it) }
                 recyclerView.adapter?.notifyDataSetChanged()
             }
 
             override fun onFailure(call: Call<List<PostModel>>, t: Throwable) {
-                //Произошла ошибка
+                /* Error */
                 Toast.makeText(
                     this@MainActivity,
                     "An error occurred during networking",

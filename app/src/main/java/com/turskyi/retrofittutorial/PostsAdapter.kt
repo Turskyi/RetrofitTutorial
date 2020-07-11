@@ -19,15 +19,15 @@ class PostsAdapter internal constructor(private val posts: List<PostModel>?) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val post = posts!![position]
+        val post = posts?.get(position)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            holder.post.text = Html.fromHtml(post.elementPureHtml, Html.FROM_HTML_MODE_LEGACY)
+            holder.post.text = Html.fromHtml(post?.elementPureHtml, Html.FROM_HTML_MODE_LEGACY)
         } else {
-            holder.post.text = post.elementPureHtml?.let {
+            holder.post.text = post?.elementPureHtml?.let {
                 HtmlCompat.fromHtml(it, HtmlCompat.FROM_HTML_MODE_LEGACY)
             }
         }
-        holder.site.text = post.site
+        holder.site.text = post?.site
     }
 
     override fun getItemCount(): Int {
